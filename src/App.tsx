@@ -13,7 +13,12 @@ interface Istate{
 }
 function App() {
 
- const [people, setPeople]=useState<Istate["people"] >([])
+ const [people, setPeople]=useState<Istate["people"] >([{
+   name:"Mary Bill",
+   url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUbjoL6IYzihcnn3-MDo1E_VjkoRKYg-HLw&usqp=CAU",
+   age:36,
+   note:"Allergic to nuts"
+ }])
 
 
   return (

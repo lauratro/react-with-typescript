@@ -9,8 +9,21 @@ interface IProps{
     }[] //defining an array of objects
   }
 const List : React.FC<IProps> = ({people})=>{
+    const renderList = (): JSX.Element[]=>{
+        return people.map(person=>{
+         return(   <li className="List">
+                <div className="List-header">
+                    <img className="List-img" src={person.url}/>
+                    <h2>{person.name}</h2>
+                </div>
+                <p>{person.age}</p>
+                <p className="List-note">{person.note}</p>
+            </li>
+         )
+        })
+    }
 return (
-    <div>I am a list</div>
+    <ul>{renderList()}</ul>
 )
 }
 export default List
