@@ -1,6 +1,7 @@
 import React, { useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import List from "./components/List"
 
 interface Istate{
   people:{
@@ -8,7 +9,7 @@ interface Istate{
     age:number
     url: string
     note?: string
-  }[]
+  }[] //defining an array of objects
 }
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
      <h1>People invited to the Event</h1>
+     <List people={people}/>
     </div>
   );
 }
