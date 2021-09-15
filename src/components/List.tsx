@@ -1,13 +1,14 @@
 import React from 'react'
+import {IState as IProps} from "../App"
 //defining the type of the props
-interface IProps{
+/* interface IProps{
     people:{
       name: string
       age:number
       url: string
       note?: string
     }[] //defining an array of objects
-  }
+  } */
 const List : React.FC<IProps> = ({people})=>{
     const renderList = (): JSX.Element[]=>{
         return people.map(person=>{

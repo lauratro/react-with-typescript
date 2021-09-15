@@ -4,7 +4,7 @@ import './App.css';
 import List from "./components/List"
 import AddToList from "./components/AddToList"
 
-interface Istate{
+export interface IState{
   people:{
     name: string
     age:number
@@ -14,7 +14,7 @@ interface Istate{
 }
 function App() {
 
- const [people, setPeople]=useState<Istate["people"] >([{
+ const [people, setPeople]=useState<IState["people"] >([{
    name:"Mary Bill",
    url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUbjoL6IYzihcnn3-MDo1E_VjkoRKYg-HLw&usqp=CAU",
    age:36,
@@ -26,7 +26,7 @@ function App() {
     <div className="App">
      <h1>People invited to the Event</h1>
       <List people={people} />
-      <AddToList/>
+      <AddToList people={people} setPeople={setPeople}/>
     </div>
   );
 }
