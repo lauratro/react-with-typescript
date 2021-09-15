@@ -11,7 +11,9 @@ export interface IState{
     url: string
     note?: string
   }[] //defining an array of objects
+pers:string
 }
+
 function App() {
 
  const [people, setPeople]=useState<IState["people"] >([{
@@ -25,7 +27,7 @@ function App() {
   return (
     <div className="App">
      <h1>People invited to the Event</h1>
-      <List people={people} />
+      <List people={people} setPeople={setPeople}/>
       <AddToList people={people} setPeople={setPeople}/>
     </div>
   );
