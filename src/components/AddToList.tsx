@@ -10,7 +10,8 @@ interface IProps{
         name: "",
         age: "",
         note: "",
-        image: ""
+        image: "",
+        id: ""
     })
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
         setInput({
@@ -26,8 +27,8 @@ interface IProps{
                 name: input.name,
                 age: parseInt(input.age),
                 url: input.image,
-                note:input.note
-            
+                note:input.note,
+                id:`${input.name}${input.note}`           
             }
         ])
     }

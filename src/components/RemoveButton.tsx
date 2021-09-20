@@ -14,7 +14,7 @@ const RemoveButton: React.FC<IProps> = ({ people, setPeople, pers }) => {
     const handleRemoveItem = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     
 
-   setPeople(people.filter(item => item.name !== pers));
+   setPeople(people.filter(item => item.id !== pers));
   };
     return (
         <button onClick={handleRemoveItem}>

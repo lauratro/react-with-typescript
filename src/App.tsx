@@ -10,6 +10,7 @@ export interface IState{
     age:number
     url: string
     note?: string
+    id:string
   }[] //defining an array of objects
 pers:string
 }
@@ -20,7 +21,8 @@ function App() {
    name:"Mary Bill",
    url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUbjoL6IYzihcnn3-MDo1E_VjkoRKYg-HLw&usqp=CAU",
    age:36,
-   note:"Allergic to nuts"
+   note:"Allergic to nuts",
+   id:"Mary Bill Allergic to nuts"
  }])
 
 
